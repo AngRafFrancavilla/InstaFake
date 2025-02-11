@@ -1,19 +1,11 @@
-import { TextInput } from "react-native";
+// components/Input.jsx
+import React from "react";
+import { TextInput, StyleSheet } from "react-native";
 
-function MyInput({ placeholder, password, value, onChange }) {
+function Input({ placeholder, password, value, onChange }) {
   return (
     <TextInput
-      style={{
-        backgroundColor: '#fff',
-        height: 50, 
-        width: '80%',
-        padding: 15, 
-        borderRadius: 10, 
-        fontSize: 16, 
-        marginBottom: 20, 
-        borderWidth: 1,
-        borderColor: '#ccc',
-      }}
+      style={styles.input}
       placeholder={placeholder}
       secureTextEntry={password}
       value={value}
@@ -22,4 +14,18 @@ function MyInput({ placeholder, password, value, onChange }) {
   );
 }
 
-export default MyInput;
+const styles = StyleSheet.create({
+  input: {
+    backgroundColor: '#fff',
+    height: 50,
+    width: '80%',
+    padding: 15,
+    borderRadius: 10,
+    fontSize: 16,
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: '#ccc',
+  },
+});
+
+export default Input;
